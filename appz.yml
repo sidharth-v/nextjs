@@ -1,0 +1,26 @@
+app:
+    name: NextJs
+    code: NextJs
+    notify: svengathattil@ecloudcontrol.com
+
+build:
+    version: 0.1
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: node-14.16
+
+
+deploy:
+    context: sidharth-v/DEV
+    replicas: 1
+    port:
+    - 8080
+    - 80
+
+
+properties:
+    page_title: "React-bootstrap + nodejs-express App"
+    ##site_url: "https://hellonodejs.appzclient.com/"
+    revision: 53
+    page_color: Blue
